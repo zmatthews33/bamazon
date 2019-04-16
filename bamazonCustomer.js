@@ -29,7 +29,21 @@ function showGoods() {
           " | " +
           product.price
       );
-      console.log("\n----------------------\n");
     });
+    console.log("\n----------------------\n");
+
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "productID",
+        message:
+          "Which product would you like to buy? (Please Enter the Product ID)"
+      },
+      {
+        type: "input",
+        name: "quantity",
+        message: "How many would you like to purchase?"
+      }
+    ]);
   });
 }
