@@ -13,10 +13,10 @@ connection.connect(function(err) {
   if (err) throw err;
   console.log("connected");
 
-  userPurchase();
+  showGoods();
 });
 
-function userPurchase() {
+function showGoods() {
   var query = "SELECT item_id, product_name, price FROM products";
   connection.query(query, function(err, res) {
     console.log("~~~ Items Available for Sale ~~~");
