@@ -5,7 +5,6 @@ An Amazon-like CLI project for class. View and "purchase" products as a customer
 - Node
   - mysql
   - inquirer
-  - dotenv
 ## Installation
 1. Clone or download the repository. Run `npm install` to get load the required dependencies.
 2. Run the SQL commands included in the store-setup.sql file to generate a MySQL database.
