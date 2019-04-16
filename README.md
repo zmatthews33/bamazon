@@ -1,9 +1,8 @@
 # Bamazon
 An Amazon-like storefront utilizing MySQL. The app customers view inventory and order. Purchases deplete stock from the store's inventory.
 ## Technologies
-- MySQL
 - Node
-- mysql
+- MySQL
 - inquirer
 ## Installation
 1. Clone or download the repository. Run `npm install` to load the required dependencies.
