@@ -6,11 +6,30 @@ const connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "",
-  database: "bamazon"
+  database: "bamazonDB"
 });
 
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected");
-  connection.end();
+
+  userPurchase();
 });
+
+function userPurchase() {
+  var query = "SELECT item_id, product_name, price FROM products";
+  connection.query(query, function(err, res) {
+    console.log("~~~ Items Available for Sale ~~~");
+    res.forEach(function(product) {
+      console.log(
+        "ID: " +
+          product.item_id +
+          " | " +
+          product.product_name +
+          " | " +
+          product.price
+      );
+      console.log("\n----------------------\n");
+    });
+  });
+}
